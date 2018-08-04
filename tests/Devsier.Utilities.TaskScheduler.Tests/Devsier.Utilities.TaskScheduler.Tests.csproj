@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DebugType>portable</DebugType>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Closer2U.Api.Reminders.ServiceModel" Version="1.0.0-unstable0023" />
+    <ProjectReference Include="..\..\src\Closer2U.Api.Reminders.ServiceInterface\Closer2U.Api.Reminders.ServiceInterface.csproj" />
+    <PackageReference Include="Closer2U.DataModel" Version="1.0.0-unstable0021" />
+    <PackageReference Include="Closer2U.Interfaces" Version="1.1.0-unstable0051" />
+    <PackageReference Include="IM.Interfaces" Version="0.1.0-unstable0022" />
+    <PackageReference Include="IM.Testing" Version="0.1.0-unstable0026" />
+    <PackageReference Include="IM.Utilities.Aws" Version="0.7.0-unstable0034" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="ServiceStack" Version="5.1.1" />
+    <PackageReference Include="ServiceStack.Aws" Version="5.1.1" />
+    <PackageReference Include="ServiceStack.Kestrel" Version="5.1.1" />
+    <ProjectReference Include="..\..\src\Closer2U.Api.Reminders\Closer2U.Api.Reminders.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="app.config" />
+    <Content Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
